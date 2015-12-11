@@ -25,7 +25,7 @@ public class CallbackServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Facebook facebook = (Facebook) request.getSession().getAttribute("facebook");
+        Facebook facebook = (Facebook) request.getSession().getAttribute("fb");
         String oauthCode = request.getParameter("code");
         try {
         	AccessToken info=facebook.getOAuthAccessToken(oauthCode);

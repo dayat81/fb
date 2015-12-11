@@ -15,7 +15,7 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Facebook facebook = new FacebookFactory().getInstance();
-        request.getSession().setAttribute("facebook", facebook);
+        request.getSession().setAttribute("fb", facebook);
         String ref=request.getParameter("ref");
         System.out.println("ref sign "+ref);
         request.getSession().setAttribute("ref", ref);

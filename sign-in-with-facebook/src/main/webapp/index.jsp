@@ -13,9 +13,6 @@ var ref="<%= request.getParameter("ref") %>";
 <tag:notloggedin>
   <p>Login flow for Web Applications:</p>
   <a href="#" onclick="window.location.href = 'signin?ref='+ref"><img src="./assets/login-with-facebook.png" alt="Sign in with Facebook"></a>
-  <hr />
-  <p>Login from Devices:</p>
-  <a href="gencode"><img src="./assets/login-with-facebook.png" alt="Sign in with Facebook"></a>
 </tag:notloggedin>
 <tag:loggedin>
   <h1>Welcome ${facebook.name} (${facebook.id})</h1>
