@@ -5,11 +5,14 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Dashboard</title>
+<script>
+var ref="<%= request.getParameter("ref") %>";
+</script>
 </head>
 <body>
 <tag:notloggedin>
   <p>Login flow for Web Applications:</p>
-  <a href="signin"><img src="./assets/login-with-facebook.png" alt="Sign in with Facebook"></a>
+  <a href="#" onclick="window.location.href = 'signin?ref='+ref"><img src="./assets/login-with-facebook.png" alt="Sign in with Facebook"></a>
   <hr />
   <p>Login from Devices:</p>
   <a href="gencode"><img src="./assets/login-with-facebook.png" alt="Sign in with Facebook"></a>

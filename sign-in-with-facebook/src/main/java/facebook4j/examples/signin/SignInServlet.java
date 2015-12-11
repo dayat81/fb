@@ -16,6 +16,9 @@ public class SignInServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Facebook facebook = new FacebookFactory().getInstance();
         request.getSession().setAttribute("facebook", facebook);
+        String ref=request.getParameter("ref");
+        System.out.println("ref sign "+ref);
+        request.getSession().setAttribute("ref", ref);
         StringBuffer callbackURL = request.getRequestURL();
         int index = callbackURL.lastIndexOf("/");
         callbackURL.replace(index, callbackURL.length(), "").append("/callback");
